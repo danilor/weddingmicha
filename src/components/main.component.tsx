@@ -1,0 +1,47 @@
+import Navigation from "./navigation.component.tsx";
+import Header from "./header.component.tsx";
+import People from "./people.component.tsx";
+import Time from "./time.component.tsx";
+import Story from "./story.component.tsx";
+import Gallery from "./gallery.component.tsx";
+import RSVP from "./RSVP.component.tsx";
+import Footer from "./footer.component.tsx";
+import GoToTop from "./GoToTop.component.tsx";
+// import Map from "./map.compoment.tsx";
+
+function Main(){
+
+    return(
+        <div>
+            <div id="page">
+                <Navigation />
+                <Header />
+                <People />
+                <Time />
+                <Story />
+                <Gallery />
+                {/*<Numbers />*/}
+                {/*<Wishes />*/}
+                {/*<Services />*/}
+                {/*<Map />*/}
+                <RSVP />
+
+                <Footer />
+
+
+
+
+
+
+
+
+
+
+            </div>
+
+            <GoToTop />
+        </div>
+    );
+}
+
+export default Main;
