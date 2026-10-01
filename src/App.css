@@ -11,6 +11,10 @@
   font-weight: normal;
   font-style: normal;
 }
+:root {
+  interpolate-size: allow-keywords;
+}
+
 body {
   font-family: "Work Sans", Arial, sans-serif;
   font-weight: 400;
@@ -28,6 +32,7 @@ body {
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
+  overflow: hidden;
 }
 
 .offcanvas #page {
@@ -75,17 +80,17 @@ h1, h2, h3, h4, h5, h6, figure {
 
 ::-webkit-selection {
   color: #fff;
-  background: #F14E95;
+  background: #A87876;
 }
 
 ::-moz-selection {
   color: #fff;
-  background: #F14E95;
+  background: #A87876;
 }
 
 ::selection {
   color: #fff;
-  background: #F14E95;
+  background: #A87876;
 }
 
 .fh5co-nav {
@@ -829,7 +834,7 @@ h1, h2, h3, h4, h5, h6, figure {
   display: inline-block;
   zoom: 1;
   *display: inline;
-  color: #F14E95;
+  color: #A87876;
   padding-left: 10px;
   padding-right: 10px;
 }
@@ -851,7 +856,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 .fh5co-contact-info ul li:before {
-  color: #F14E95;
+  color: #A87876;
   position: absolute;
   left: 0;
   top: 0.05em;
@@ -1317,7 +1322,7 @@ form label {
 }
 
 #fh5co-testimonial .wrap-testimony .testimony-slide span a.twitter {
-  color: #F14E95;
+  color: #A87876;
   font-weight: 300;
 }
 
@@ -1420,7 +1425,7 @@ form label {
   display: table-cell;
   vertical-align: middle;
   font-size: 30px;
-  color: #F14E95;
+  color: #A87876;
 }
 
 .feature-left .feature-copy {
@@ -1498,7 +1503,7 @@ form label {
 #fh5co-started .btn {
   height: 54px;
   border: none !important;
-  background: #F14E95;
+  background: #A87876;
   color: #fff;
   font-size: 16px;
   text-transform: uppercase;
@@ -1549,7 +1554,7 @@ form label {
 
 .owl-carousel .owl-controls .owl-dot.active span {
   background: transparent;
-  border: 2px solid #F14E95;
+  border: 2px solid #A87876;
 }
 
 #fh5co-offcanvas {
@@ -1836,12 +1841,12 @@ form label {
 
 .btn-primary.btn-outline {
   background: transparent;
-  color: #F14E95;
-  border: 2px solid #F14E95;
+  color: #A87876;
+  border: 2px solid #A87876;
 }
 
 .btn-primary.btn-outline:hover, .btn-primary.btn-outline:focus, .btn-primary.btn-outline:active {
-  background: #F14E95;
+  background: #A87876;
   color: #fff;
 }
 
@@ -1988,7 +1993,7 @@ form label {
 .form-control:active, .form-control:focus {
   outline: none;
   box-shadow: none;
-  border-color: #F14E95;
+  border-color: #A87876;
 }
 
 .row-pb-md {
@@ -2011,6 +2016,45 @@ form label {
 
 .js .animate-box {
   opacity: 0;
+}
+
+#fh5co-honeymoon {
+  padding: 7em 0;
+}
+
+.honeymoonItemSingle {
+  margin-bottom: 30px;
+  position: relative;
+}
+.honeymoonItemSingle .honeymoonImage {
+  aspect-ratio: 1;
+  width: 100%;
+  border-radius: 6px;
+  object-fit: cover;
+}
+.honeymoonItemSingle .text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 7px;
+  padding: 4px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+  transition: height 0.3s ease-in-out;
+}
+.honeymoonItemSingle .text h4 {
+  color: #E1D4CB;
+  margin-bottom: 0;
+}
+.honeymoonItemSingle .text p {
+  margin-top: 5px;
 }
 
 

@@ -14,6 +14,7 @@ export default function Navigation() {
                             <li className="active"><a href="index.html">Inicio</a></li>
                             <li><a href="#" onClick={() => ScrollService.navigate("fh5co-event")}>Evento</a></li>
                             <li><a href="#" onClick={() => ScrollService.navigate("fh5co-gallery")}>Galería</a></li>
+                            <li><a href="#" onClick={() => ScrollService.navigate("fh5co-honeymoon")}>Luna de Miel</a></li>
                             <li><a href="#" onClick={() => ScrollService.navigate("fh5co-started")}>RSVP</a></li>
                         </ul>
                     </div>

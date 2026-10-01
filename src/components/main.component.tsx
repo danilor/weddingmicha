@@ -7,6 +7,7 @@ import Gallery from "./gallery.component.tsx";
 import RSVP from "./RSVP.component.tsx";
 import Footer from "./footer.component.tsx";
 import GoToTop from "./GoToTop.component.tsx";
+import Honeymoon from "./honeymoon.component.tsx";
 // import Map from "./map.compoment.tsx";
 
 function Main(){
@@ -24,6 +25,7 @@ function Main(){
                 {/*<Wishes />*/}
                 {/*<Services />*/}
                 {/*<Map />*/}
+                <Honeymoon />
                 <RSVP />
 
                 <Footer />
