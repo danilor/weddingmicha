@@ -11,6 +11,7 @@ export default defineConfig({
     // 2. Clear the folder before building (recommended if outputting outside the root)
     emptyOutDir: true,
   },
+  base:'./',
   css: {
     lightningcss: {
       errorRecovery: true,
