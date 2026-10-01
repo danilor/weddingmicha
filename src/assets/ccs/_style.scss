@@ -720,7 +720,7 @@ h1, h2, h3, h4, h5, h6, figure {
   color: rgba(255, 255, 255, 0.7);
 }
 #fh5co-gallery-list li a .case-studies-summary h2 {
-  color: #fff;
+  color: $color_cream;
   margin-bottom: 0;
 }
 @media screen and (max-width: 768px) {
@@ -1347,7 +1347,7 @@ form label {
   background: rgba(0, 0, 0, 0.4);
 }
 #fh5co-started .fh5co-heading h2 {
-  color: #fff;
+  color: $color_cream;
 }
 #fh5co-started .fh5co-heading p {
   color: rgba(255, 255, 255, 0.5);
