@@ -5,6 +5,7 @@ export default function Map() {
 
     <div id="fh5co-couple">
         <div className="container">
+
             <div className="row" data-aos="fade-up">
                 <div className="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
                     <h2>¡Hola!</h2>

@@ -251,6 +251,7 @@ h1, h2, h3, h4, h5, h6, figure {
 
 #fh5co-counter,
 #fh5co-event,
+#fh5co-dresscode,
 .fh5co-bg {
   background-size: cover;
   background-position: top center;
@@ -410,12 +411,13 @@ h1, h2, h3, h4, h5, h6, figure {
   color: #60323D;
 }
 
-#fh5co-event .fh5co-heading h2 {
+#fh5co-event .fh5co-heading h2, #fh5co-dresscode .fh5co-heading h2 {
   color: #E1D4CB;
 }
 
 #fh5co-counter .fh5co-heading span,
-#fh5co-event .fh5co-heading span {
+#fh5co-event .fh5co-heading span,
+#fh5co-dresscode .fh5co-heading span {
   color: rgba(255, 255, 255, 0.5);
   text-transform: uppercase;
   font-size: 13px;
@@ -424,13 +426,14 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 #fh5co-counter .overlay,
+#fh5co-dresscode .overlay,
 #fh5co-event .overlay {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.5);
 }
 
 @media screen and (max-width: 768px) {
@@ -478,6 +481,8 @@ h1, h2, h3, h4, h5, h6, figure {
 
 #fh5co-counter .event-wrap p, #fh5co-counter .event-wrap span,
 #fh5co-event .event-wrap p,
+#fh5co-dresscode .event-wrap p,
+#fh5co-dresscode p,
 #fh5co-event .event-wrap span {
   display: block;
   color: rgba(255, 255, 255, 0.8);
@@ -1085,6 +1090,7 @@ form label {
 #fh5co-couple-story,
 #fh5co-couple,
 #fh5co-gallery,
+#fh5co-dresscode,
 .fh5co-section {
   padding: 7em 0;
   clear: both;
@@ -1099,7 +1105,7 @@ form label {
   #fh5co-couple-story,
   #fh5co-couple,
   #fh5co-gallery,
-  .fh5co-section {
+  #fh5co-dresscode .fh5co-section {
     padding: 3em 0;
   }
 }
@@ -1662,8 +1668,23 @@ form label {
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
+  /* Link animation to the global scroll timeline */
+  animation: reveal linear both;
+  animation-timeline: scroll(root);
+  /* The element becomes fully visible between 0px and 150px of scrolling */
+  animation-range: entry 0px exit 300px;
 }
 
+@keyframes reveal {
+  from {
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
 .gototop.active {
   opacity: 1;
   visibility: visible;
@@ -2022,6 +2043,10 @@ form label {
   padding: 7em 0;
 }
 
+#map_location .container {
+  padding: 7em 0;
+}
+
 .honeymoonItemSingle {
   margin-bottom: 30px;
   position: relative;
@@ -2055,6 +2080,46 @@ form label {
 }
 .honeymoonItemSingle .text p {
   margin-top: 5px;
+}
+
+.dresscode {
+  min-height: 70px;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  grid-template-columns: auto auto auto auto auto auto;
+}
+.dresscode .circle_container {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  gap: 12px;
+}
+.dresscode .circle_container .circle {
+  width: 75px;
+  height: 75px;
+  background-color: black;
+  border-radius: 50%;
+  z-index: 99;
+}
+.dresscode .circle_container .circle:nth-child(1) {
+  background-color: #E1D4CB;
+}
+.dresscode .circle_container .circle:nth-child(2) {
+  background-color: #D6A584;
+}
+.dresscode .circle_container .circle:nth-child(3) {
+  background-color: #A87876;
+}
+.dresscode .circle_container .circle:nth-child(4) {
+  background-color: #9A6770;
+}
+.dresscode .circle_container .circle:nth-child(5) {
+  background-color: #60323D;
+}
+.dresscode .circle_container .circle:nth-child(6) {
+  background-color: #331C24;
 }
 
 

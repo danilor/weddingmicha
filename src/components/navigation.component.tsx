@@ -3,7 +3,7 @@ import ScrollService from "../services/Scroll.service.ts";
 
 export default function Navigation() {
     return (
-        <nav className="fh5co-nav" role="navigation">
+        <nav className="fh5co-nav" role="navigation" id={'main_navigation'}>
             <div className="container">
                 <div className="row">
                     <div className="col-xs-2">

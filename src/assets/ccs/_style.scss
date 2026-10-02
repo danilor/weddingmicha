@@ -226,6 +226,7 @@ h1, h2, h3, h4, h5, h6, figure {
 
 #fh5co-counter,
 #fh5co-event,
+#fh5co-dresscode,
 .fh5co-bg {
   background-size: cover;
   background-position: top center;
@@ -373,11 +374,13 @@ h1, h2, h3, h4, h5, h6, figure {
   color: $color_warm_earth;
 }
 
-#fh5co-event .fh5co-heading h2{
+#fh5co-event .fh5co-heading h2, #fh5co-dresscode .fh5co-heading h2{
   color: $color_cream;
 }
 #fh5co-counter .fh5co-heading span,
-#fh5co-event .fh5co-heading span {
+#fh5co-event .fh5co-heading span,
+#fh5co-dresscode .fh5co-heading span
+{
   color: rgba(255, 255, 255, 0.5);
   text-transform: uppercase;
   font-size: 13px;
@@ -385,13 +388,14 @@ h1, h2, h3, h4, h5, h6, figure {
   font-weight: 600;
 }
 #fh5co-counter .overlay,
+#fh5co-dresscode .overlay,
 #fh5co-event .overlay {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.5);
 }
 @media screen and (max-width: 768px) {
   #fh5co-counter,
@@ -436,6 +440,8 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 #fh5co-counter .event-wrap p, #fh5co-counter .event-wrap span,
 #fh5co-event .event-wrap p,
+#fh5co-dresscode .event-wrap p,
+#fh5co-dresscode p,
 #fh5co-event .event-wrap span {
   display: block;
   color: rgba(255, 255, 255, 0.8);
@@ -1009,6 +1015,7 @@ form label {
 #fh5co-couple-story,
 #fh5co-couple,
 #fh5co-gallery,
+#fh5co-dresscode,
 .fh5co-section {
   padding: 7em 0;
   clear: both;
@@ -1022,6 +1029,7 @@ form label {
   #fh5co-couple-story,
   #fh5co-couple,
   #fh5co-gallery,
+  #fh5co-dresscode
   .fh5co-section {
     padding: 3em 0;
   }
@@ -1528,7 +1536,25 @@ form label {
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
+
+  /* Link animation to the global scroll timeline */
+  animation: reveal linear both;
+  animation-timeline: scroll(root);
+  /* The element becomes fully visible between 0px and 150px of scrolling */
+  animation-range: entry 0px exit 300px; 
 }
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
 .gototop.active {
   opacity: 1;
   visibility: visible;
@@ -1856,6 +1882,12 @@ form label {
   padding: 7em 0;
 }
 
+#map_location{
+  .container{
+    padding: 7em 0;
+  }
+}
+
 .honeymoonItemSingle{
   margin-bottom: 30px;
   position: relative;
@@ -1892,4 +1924,47 @@ form label {
     }
   }
 }
+
+.dresscode{
+  //background-color: black;
+  min-height: 70px;
+  width: auto;
+  display: flex;
+  justify-content: center;
+
+  grid-template-columns: auto auto auto auto auto auto;
+  .circle_container{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    gap: 12px;
+    .circle {
+      width: 75px;
+      height: 75px;
+      background-color: black;
+      border-radius: 50%;
+      z-index: 99;
+    }
+    .circle:nth-child(1) {
+      background-color: $color_cream;
+    }
+    .circle:nth-child(2) {
+      background-color: $color_salmon;
+    }
+    .circle:nth-child(3) {
+      background-color: $color_lipstick;
+    }
+    .circle:nth-child(4) {
+      background-color: $color_dark_lipstick;
+    }
+    .circle:nth-child(5) {
+      background-color: $color_warm_earth;
+    }
+    .circle:nth-child(6) {
+      background-color: $color_soft_black;
+    }
+  }
+}
+
 /*# sourceMappingURL=style.css.map */

@@ -8,6 +8,7 @@ import RSVP from "./RSVP.component.tsx";
 import Footer from "./footer.component.tsx";
 import GoToTop from "./GoToTop.component.tsx";
 import Honeymoon from "./honeymoon.component.tsx";
+import DressCode from "./dresscode.component.tsx";
 // import Map from "./map.compoment.tsx";
 
 function Main(){
@@ -19,6 +20,7 @@ function Main(){
                 <Header />
                 <People />
                 <Time />
+                <DressCode />
                 <Story />
                 <Gallery />
                 {/*<Numbers />*/}
@@ -27,6 +29,7 @@ function Main(){
                 {/*<Map />*/}
                 <Honeymoon />
                 <RSVP />
+
 
                 <Footer />
 

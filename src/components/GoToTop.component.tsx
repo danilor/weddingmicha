@@ -1,7 +1,9 @@
+import ScrollService from "../services/Scroll.service.ts";
+
 export default function GoToTop() {
     return (
-        <div className="gototop js-top">
-            <a href="#" className="js-gotop"><i className="icon-arrow-up"></i></a>
+        <div className="gototop">
+            <a href="#" className="" onClick={() => ScrollService.navigate("main_navigation")}><i className="zi-arrow-up2"></i></a>
         </div>
     );
 }
