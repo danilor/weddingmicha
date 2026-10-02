@@ -5,8 +5,11 @@ import Counter from "./counter.component.tsx";
 
 // https://www.npmjs.com/package/calendar-link
 
-export default function Header() {
+type HeaderPropsType = {
+    isValid: boolean
+}
 
+export default function Header({isValid}: HeaderPropsType) {
 
     return (
         <header id="fh5co-header" className="fh5co-cover" role="banner"
@@ -18,10 +21,12 @@ export default function Header() {
                         <div data-aos="fade-up" className="display-t">
                             <div className="display-tc animate-box" data-animate-effect="fadeIn">
                                 <h1>Michael &amp; Agnes</h1>
-                                <h2>¡Nos vamos a casar!</h2>
-                                <Counter />
-                                <p><a href={ics(EventConfig.event as CalendarEvent)} className="btn btn-default btn-sm">Reserva
-                                    el día</a></p>
+
+                                {isValid && <h2>¡Nos vamos a casar!</h2>}
+                                {isValid && <Counter />}
+                                {isValid && <p><a href={ics(EventConfig.event as CalendarEvent)} className="btn btn-default btn-sm">Reserva
+                                    el día</a></p>}
+
                             </div>
                         </div>
                     </div>

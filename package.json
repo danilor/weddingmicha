@@ -7,18 +7,26 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "server": "node server.ts"
   },
   "dependencies": {
-    "aos": "^3.0.0-beta.6",
+    "aos": "^2.3.4",
+    "axios": "^1.20.0",
     "calendar-link": "^2.11.6",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "knex": "^3.3.0",
+    "mysql": "^2.18.1",
     "react": "^19.2.8",
     "react-dom": "^19.2.8"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
     "@types/aos": "^3.0.8",
-    "@types/node": "^24.13.3",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/node": "^24.19.1",
     "@types/react": "^19.2.18",
     "@types/react-dom": "^19.2.7",
     "@vitejs/plugin-react": "^6.1.1",

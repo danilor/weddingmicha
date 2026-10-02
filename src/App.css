@@ -450,7 +450,8 @@ h1, h2, h3, h4, h5, h6, figure {
   }
 }
 #fh5co-counter .event-wrap,
-#fh5co-event .event-wrap {
+#fh5co-event .event-wrap,
+#fh5co-started .event-wrap {
   border: 2px solid rgba(255, 255, 255, 0.5);
   background: rgba(255, 255, 255, 0.1);
   padding: 30px;
@@ -464,12 +465,14 @@ h1, h2, h3, h4, h5, h6, figure {
 
 @media screen and (max-width: 768px) {
   #fh5co-counter .event-wrap,
-  #fh5co-event .event-wrap {
+  #fh5co-event .event-wrap,
+  #fh5co-started .event-wrap {
     margin-bottom: 10px;
   }
 }
 #fh5co-counter .event-wrap h3,
-#fh5co-event .event-wrap h3 {
+#fh5co-event .event-wrap h3,
+#fh5co-started .event-wrap h3 {
   font-size: 20px;
   color: #fff;
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
@@ -481,21 +484,25 @@ h1, h2, h3, h4, h5, h6, figure {
 
 #fh5co-counter .event-wrap p, #fh5co-counter .event-wrap span,
 #fh5co-event .event-wrap p,
+#fh5co-started .event-wrap p,
 #fh5co-dresscode .event-wrap p,
 #fh5co-dresscode p,
-#fh5co-event .event-wrap span {
+#fh5co-event .event-wrap span,
+#fh5co-started .event-wrap span {
   display: block;
   color: rgba(255, 255, 255, 0.8);
 }
 
 #fh5co-counter .event-wrap i,
-#fh5co-event .event-wrap i {
+#fh5co-event .event-wrap i,
+#fh5co-started .event-wrap i {
   color: white;
   font-size: 20px;
 }
 
 #fh5co-counter .event-wrap .event-col,
-#fh5co-event .event-wrap .event-col {
+#fh5co-event .event-wrap .event-col,
+#fh5co-started .event-wrap .event-col {
   width: 50%;
   float: left;
   margin-bottom: 30px;
@@ -2123,6 +2130,33 @@ form label {
   background-color: #331C24;
 }
 
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+.loading img {
+  width: 16.6666666667vw;
+  max-width: 150px;
+  animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
 
 /*# sourceMappingURL=App.css.map */
