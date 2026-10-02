@@ -2094,11 +2094,12 @@ form label {
   margin-left: auto;
   margin-right: auto;
   width: auto;
-  gap: 12px;
+  gap: 7px;
 }
 .dresscode .circle_container .circle {
-  width: 75px;
-  height: 75px;
+  width: 14.2857142857vw;
+  max-width: 80px;
+  aspect-ratio: 1;
   background-color: black;
   border-radius: 50%;
   z-index: 99;
